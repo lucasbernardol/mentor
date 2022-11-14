@@ -1,0 +1,194 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.preview {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.preview-card {
+  overflow: hidden;
+
+  width: min(90%, 600px);
+  margin: 1rem;
+
+  display: flex;
+  align-items: stretch;
+
+  border-radius: 0.8rem;
+}
+
+/* first "div" */
+.preview-card__essence {
+  flex: 1;
+}
+
+/* second "div" */
+.preview-card__content {
+  --b-ref: 1px;
+  --c-ref: var(--color-dark-light-blue);
+
+  flex: 1;
+
+  width: 100%;
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  border-radius: 0 0.8rem 0.8rem 0;
+  background-color: var(--color-white);
+
+  border-top: var(--b-ref) solid var(--c-ref);
+  border-right: var(--b-ref) solid var(--c-ref);
+  border-bottom: var(--b-ref) solid var(--c-ref);
+}
+
+.preview-card__type {
+  font-size: 1.4rem;
+  font-weight: 500;
+
+  color: var(--color-dark-grayish-blue);
+
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.preview-card__title {
+  /* margin: 3.2rem 0; */
+  margin-top: 2.8rem;
+  margin-bottom: 2rem;
+
+  font-family: 'Fraunces', serif;
+  font-weight: 700; /* bold */
+
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.preview-card__text {
+  margin-bottom: 2rem;
+
+  font-size: 1.4rem;
+  font-weight: 500;
+
+  color: var(--color-dark-grayish-blue);
+  line-height: 1.6;
+}
+
+/* Card payment/styles */
+.preview-card__payment {
+  width: 100%;
+
+  flex: 1;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.preview-card__button {
+  width: 100%;
+  padding: 1.8rem 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--color-primary-dark-cyan);
+  border-radius: 0.8rem;
+
+  font-weight: 700;
+
+  color: var(--color-white);
+
+  cursor: pointer;
+  transition: background 0.6s cubic-bezier(0.215, 0.61, 0.355, 1),
+    outline-color 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.preview-card__button span {
+  margin-left: 1rem;
+}
+
+.preview-card__button:hover {
+  --ref: var(--color-very-dark-blue); /* Local scope/variable */
+
+  /*outline-color: var(--outline-color); */
+  background-color: var(--ref);
+
+  outline: var(--w-outline) solid var(--ref);
+  outline-offset: var(--outline-offset);
+}
+
+.preview-card__button:focus {
+  outline: var(--w-outline) solid var(--color-primary-dark-cyan);
+  outline-offset: var(--outline-offset);
+}
+
+.preview-card__price {
+  margin-bottom: 2rem;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  font-size: 2.4rem;
+  font-weight: 700;
+
+  color: var(--color-primary-dark-cyan);
+  font-family: 'Fraunces', serif;
+}
+
+.preview-card__price small {
+  margin-left: 2rem;
+
+  font-family: inherit;
+  font-weight: 700;
+
+  color: var(--color-dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+.author {
+  margin: 0.8rem 0;
+
+  color: var(--color-dark-grayish-blue);
+
+  font-size: 1.4rem;
+}
+
+.author a {
+  display: inline-block;
+
+  padding: 0.8rem 0.4rem;
+
+  color: var(--color-very-dark-blue);
+
+  opacity: 0.6;
+  transition: font-weight 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.author a:hover {
+  font-weight: 700;
+  opacity: 1;
+}
+
+.author a:focus {
+  text-decoration: underline;
+}

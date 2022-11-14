@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+:root {
+  --color-primary-dark-cyan: #3c8067;
+  --color-primary-selection: #3c80674d;
+
+  --color-primary-cream: hsl(30, 38%, 92%);
+  --color-very-dark-blue: hsl(212, 21%, 14%);
+
+  --color-dark-grayish-blue: hsl(228, 12%, 48%);
+  --color-dark-light-blue: hsl(226, 36%, 91%);
+
+  --color-white: hsl(0, 0%, 100%);
+
+  --w-outline: 2px;
+  --outline-offset: 1px;
+
+  font-size: 62.5%; /* 10px */
+}
+
+*::selection {
+  background-color: var(--color-primary-selection);
+  color: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  outline: none;
+  border: none;
+
+  font-size: 1.4rem; /* 14px */
+
+  /* font-family: 'Fraunces', serif; */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+body {
+  background-color: var(--color-primary-cream);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/** Testing  */
+
+/* CSS accessibility UI ERRORS */
+body:not([data-css-accessbility-ui='off']) a:not([href]) {
+  opacity: 1 !important;
+  visibility: visible;
+
+  font-size: 1.4rem;
+  border: 2px dotted red;
+}
+
+body:not([data-css-accessbility-ui='off']) a:not([href])::before {
+  content: '[ERROR href]: "property" href?';
+
+  font-size: 1.6rem;
+  font-weight: bold !important;
+  font-family: 'Courier New', Courier, monospace;
+
+  margin: 0 0.8rem;
+  padding: 0.2rem;
+
+  opacity: 1 !important;
+  background-color: #fff;
+}
+
+body:not([data-css-accessbility-ui='off']) a:not([href])[data-xhref]::before,
+body:not([data-css-accessbility-ui='off']) a:not([href]).xhref::before {
+  display: none;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+
+  --outline-color: red; /* Local/inherit variables (example) */
+}
+
+button * {
+  pointer-events: none;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+}
+
+.icon {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+
+  object-fit: cover;
+  -o-object-fit: cover;
+  /* object-position: center;
+  -o-object-position: center; */
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+}

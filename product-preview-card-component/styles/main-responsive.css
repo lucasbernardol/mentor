@@ -1,0 +1,32 @@
+@media only screen and (max-width: 600px) {
+  .preview-card {
+    flex-direction: column;
+  }
+
+  .preview-card__content {
+    border-radius: 0;
+    border-top: none;
+
+    border-left: var(--b-ref) solid var(--c-ref);
+  }
+
+  .perfume-img {
+    display: none;
+  }
+
+  .preview-card__essence {
+    flex: none;
+
+    width: 100%;
+    height: 30rem;
+
+    background-image: url('../assets/images/image-product-mobile.jpg');
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /* background-position-x: center;
+    background-position-y: center; */
+    background-position: center center;
+  }
+}
