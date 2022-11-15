@@ -2,11 +2,40 @@
   --color-primary-soft-blue: #8bacda;
   --color-primary-cyan: #00fff7;
 
-  --color-very-dark-blue: hsl(217, 54%, 11%);
+  --color-very-dark-blue: #0d192b;
   --color-dark-blue: hsl(216, 50%, 16%);
   --color-dark-line: hsl(215, 32%, 27%);
 
+  --color-background-view: rgba(18, 211, 204, 0.3);
+
   --color-white: #ffffff;
+
+  /**
+   * Dimensions (width/height)
+   */
+  --w-preview-card: 380px;
+  --h-preview-header: 32rem;
+
+  --w-avatar: 48px;
+  --h-avatar: 48px;
+
+  /**
+   * Paddings/boxs
+   */
+  --m-preview-card: 2rem;
+  --p-main: 2rem;
+  --p-preview-card: 2.8rem;
+  --p-top-preview-content: 2rem;
+
+  /**
+   * others
+   */
+  --avatar-offset: 2px;
+  --preview-radius: 1.2rem;
+
+  --small-gap: 0.8rem;
+
+  --outline-offset: 2px;
 
   font-size: 62.5%;
 }
@@ -17,7 +46,7 @@
 
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-  -webkit-box-sizing: border;
+  -webkit-box-sizing: border-box;
 
   outline: none;
   border: none;
@@ -25,6 +54,10 @@
   font-family: 'Outfit', sans-serif;
   font-size: 1.6rem; /* 16px */
   font-weight: 400;
+}
+
+body {
+  background-color: var(--color-very-dark-blue);
 }
 
 a {
@@ -55,4 +88,29 @@ img {
   -moz-user-select: none;
   -webkit-user-select: none;
   -webkit-user-drag: none;
+}
+
+.d-full {
+  width: 100%;
+  height: 100%;
+}
+
+.sr-only {
+  position: relative;
+
+  overflow: hidden;
+  visibility: hidden;
+
+  width: 0;
+  height: 0;
+
+  font-size: 0;
+
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.rounded {
+  border-radius: 50%;
 }

@@ -1,0 +1,237 @@
+.main {
+  /* padding: 0 1rem;  mobile styles */
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.nft-preview {
+  position: relative;
+  overflow: hidden;
+
+  width: min(100%, var(--w-preview-card));
+
+  padding: var(--p-preview-card);
+  margin: var(--m-preview-card) 0;
+
+  border-radius: var(--preview-radius);
+  background-color: var(--color-dark-blue);
+
+  transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.nft-preview:hover {
+  transform: scale(1.1);
+}
+
+.nft-preview__header {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 100%;
+  height: var(--h-preview-header); /* Relative height */
+
+  border-radius: 1rem;
+}
+
+.nft-preview__overlay * {
+  pointer-events: none;
+}
+
+.nft-preview__overlay {
+  position: absolute;
+
+  overflow: hidden;
+
+  visibility: hidden;
+  opacity: 0;
+
+  right: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 0;
+
+  background-color: var(--color-background-view);
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nft-preview__header:hover .nft-preview__overlay {
+  visibility: visible;
+  opacity: 1;
+
+  width: 100%;
+  height: 100%;
+}
+
+.nft-preview__content {
+  width: 100%;
+  padding: var(--p-top-preview-content) 0;
+
+  display: flex;
+  flex-direction: column;
+
+  border-bottom: 1px solid var(--color-dark-line);
+}
+
+.nft-preview__title {
+  display: block; /* Anchor */
+
+  font-size: 2rem;
+  font-weight: 700;
+
+  color: var(--color-white);
+
+  line-height: 1.4;
+  transition: color 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.nft-preview__title:hover {
+  color: var(--color-primary-cyan);
+}
+
+.nft-preview__title:focus {
+  color: var(--color-primary-cyan);
+
+  outline: 1px dashed currentColor; /** Using currentColor value */
+  outline-offset: var(--outline-offset);
+}
+
+.nft-preview__text {
+  margin: 1rem 0;
+
+  font-size: 1.7rem;
+
+  color: var(--color-primary-soft-blue);
+
+  line-height: 1.4;
+}
+
+.nft-preview__details {
+  overflow: hidden;
+
+  width: 100%;
+  margin-top: var(--small-gap);
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nft-preview__details > div {
+  width: auto;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.nft-preview__detail-price span {
+  margin-left: var(--small-gap);
+
+  font-size: 1.5rem;
+
+  color: var(--color-primary-cyan);
+
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.nft-preview__detail-publish span {
+  margin-left: var(--small-gap);
+
+  color: var(--color-primary-soft-blue);
+  font-size: 1.5rem;
+
+  line-height: 1.4;
+}
+
+.nft-preview__footer {
+  width: 100%;
+  margin-top: 2rem;
+
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nft-preview__avatar {
+  /** Local variables */
+  --w: calc(var(--w-avatar) + var(--avatar-offset));
+  --h: calc(var(--h-avatar) + var(--avatar-offset));
+
+  position: relative;
+  overflow: hidden;
+
+  width: var(--w);
+  height: var(--h);
+
+  padding: var(--avatar-offset);
+
+  border-radius: 50%;
+  border: 1px solid var(--color-dark-line);
+
+  background-color: transparent;
+
+  cursor: pointer;
+  transition: background 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nft-preview__avatar:hover {
+  background-color: var(--color-very-dark-blue);
+}
+
+.nft-preview__author {
+  margin-left: 1rem;
+
+  font-size: 1.6rem;
+  color: var(--color-primary-soft-blue);
+
+  line-height: 1.4;
+}
+
+.nft-preview__author a {
+  display: inline-block; /** Anchor */
+
+  padding: 0.2rem;
+  margin-left: 0.2rem;
+
+  color: var(--color-white);
+
+  /* prettier-ignore */
+  transition: 
+    color 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    text-decoration 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nft-preview__author a:hover {
+  color: var(--color-primary-cyan);
+
+  text-decoration: underline;
+}
+
+.nft-preview__author a:focus {
+  /** Using local scope/context variables */
+  --c-ref: var(--color-primary-cyan);
+
+  color: var(--c-ref);
+
+  outline: 1px dashed var(--c-ref);
+  outline-offset: var(--outline-offset);
+}

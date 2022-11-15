@@ -5,7 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=7" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#0d192b" />
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#0d192b" />
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0d192b" />
+    <!-- Open Graph / Facebook -->
+    <meta
+      name="description"
+      content="NFT preview card: Página web referente ao desafio proposto pela plataforma Frontend Mentor, criar um card (cartão) com o tema NFT. #challenges"
+    />
+    <meta
+      name="keywords"
+      content="José Lucas, José lucasbernardol, lucasbernardol, challenges, Frontend Mentor, @lucasbernardol, #frontendmentor, #mentor, Frontend Mentor challenges"
+    />
+    <meta
+      name="author"
+      content="José Lucas - https://github.com/lucasbernardol"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,24 +33,21 @@
     />
 
     <link rel="stylesheet" href="./styles/global/global.css" />
+    <link rel="stylesheet" href="./styles/global/global-responsive.css" />
+
+    <link rel="stylesheet" href="./styles/app.css" />
+
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/main-responsive.css" />
 
     <link
       rel="shortcut icon"
       type="image/png"
       href="./assets/images/favicon-32x32.png"
     />
-
-    <title>Frontend Mentor | NFT preview card component</title>
-
-    <!-- <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style> -->
+    <title>
+      José Lucas @lucabernardol | NFT preview card component #challenges
+    </title>
   </head>
   <body data-id="body">
     <div class="app" data-id="app">
@@ -41,45 +57,66 @@
             <img
               src="./assets/images/image-equilibrium.jpg"
               alt="Nft preview - Equilibrium image/asset"
+              class="d-full"
             />
 
-            <div class="nft-preview__overlay"></div>
+            <div class="nft-preview__overlay">
+              <a href="#" title="view">
+                <img
+                  src="./assets/images/icon-view.svg"
+                  alt="View image/svg icon"
+                />
+              </a>
+            </div>
           </header>
 
           <section class="nft-preview__content">
-            <h2 class="nft-preview__title">Equilibrium #3429</h2>
+            <h1 class="sr-only">Equilibrium #3429</h1>
+
+            <a
+              href="#"
+              class="nft-preview__title"
+              title="Equilibrium #3429"
+              tabindex="0"
+            >
+              Equilibrium #3429
+            </a>
+
             <p class="nft-preview__text">
               Our Equilibrium collection promotes balance and calm.
             </p>
 
-            <div class="nft-preview__balance">
-              <div>
+            <div class="nft-preview__details">
+              <div class="nft-preview__detail-price">
                 <img
                   src="./assets/images/icon-ethereum.svg"
                   alt="Ethereum crypto icon"
                 />
 
-                <span>0.041 ETH</span>
+                <span title="0.041 ETH">0.041 ETH</span>
               </div>
 
-              <div>
+              <div class="nft-preview__detail-publish">
                 <img
                   src="./assets/images/icon-clock.svg"
                   alt="Clock icon/svg"
                 />
 
-                <span>3 days left</span>
+                <span title="3 days left">3 days left</span>
               </div>
             </div>
           </section>
 
           <footer class="nft-preview__footer">
-            <img
-              src="./assets/images/image-avatar.png"
-              alt="Jules Wyvern Avatar/profile image, format: png"
-            />
-            <p title="Creation of Jules Wyvern">
-              Creation of <span>Jules Wyvern</span>
+            <div class="nft-preview__avatar" title="Jules Wyvern">
+              <img
+                src="./assets/images/image-avatar.png"
+                alt="Jules Wyvern Avatar/profile image, format: png"
+                class="nft-preview__image d-full rounded"
+              />
+            </div>
+            <p title="Creation of Jules Wyvern" class="nft-preview__author">
+              Creation of <a href="#" tabindex="0">Jules Wyvern</a>
             </p>
           </footer>
         </div>
