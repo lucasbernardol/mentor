@@ -1,0 +1,58 @@
+:root {
+  --color-primary-soft-blue: #8bacda;
+  --color-primary-cyan: #00fff7;
+
+  --color-very-dark-blue: hsl(217, 54%, 11%);
+  --color-dark-blue: hsl(216, 50%, 16%);
+  --color-dark-line: hsl(215, 32%, 27%);
+
+  --color-white: #ffffff;
+
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border;
+
+  outline: none;
+  border: none;
+
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.6rem; /* 16px */
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button *,
+a * {
+  pointer-events: none;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+img {
+  /* width: 100%;
+  height: 100%; */
+
+  object-fit: cover;
+  -o-object-fit: cover;
+
+  pointer-events: none;
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
