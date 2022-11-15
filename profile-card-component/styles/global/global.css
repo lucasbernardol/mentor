@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+:root {
+  --color-primary-dark-cyan: #19a2ae;
+  --color-primary-desaturated-blue: #2d3248;
+
+  --color-primary-selection: rgba(25, 162, 174, 0.3);
+
+  --color-primary-grayish-blue: hsl(227, 10%, 46%);
+
+  --color-white: #ffffff;
+  --color-dark-gray: hsl(0, 0%, 59%);
+
+  --color-light-rule: #e9e9e9;
+  --color-mediun-rule: #d4d4d4;
+
+  /* Dimensions */
+  --w-avatar: 12rem; /* 120px */
+  --h-avatar: 12rem;
+
+  --w-card: 375px;
+  --h-card-header: 128px;
+
+  /** Box */
+  --b-top-padding: 3rem;
+  --b-padding: 2rem;
+  --b-main-padding: 2rem;
+
+  /** Others */
+  --avatar-offset: 4px;
+
+  --background-circle-left: url('../../assets/images/bg-pattern-top.svg');
+  --background-circle-right: url('../../assets/images/bg-pattern-bottom.svg');
+
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 1.6rem;
+
+  outline: none;
+  border: none;
+}
+
+*::selection {
+  background-color: var(--color-primary-selection);
+  color: inherit;
+}
+
+*::-moz-selection {
+  background-color: var(--color-primary-selection);
+  color: inherit;
+}
+
+body {
+  background-color: var(--color-primary-dark-cyan);
+
+  /* prettier-ignore */
+  background-image: 
+    var(--background-circle-left),
+    var(--background-circle-right);
+
+  background-position: -20% -80%, 120% 180%;
+
+  background-repeat: no-repeat, no-repeat;
+  background-size: 45%, 45%;
+}
+
+button * {
+  pointer-events: none;
+
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}

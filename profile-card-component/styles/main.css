@@ -1,0 +1,218 @@
+.main {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card {
+  overflow: hidden;
+
+  width: min(100%, var(--w-card));
+  border-radius: 1.8rem;
+
+  transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.profile-card__header {
+  --background-header-ref: url('../assets/images/bg-pattern-card.svg'); /* local/scope */
+
+  overflow: hidden;
+  position: relative;
+
+  width: 100%;
+  height: var(--h-card-header);
+
+  background-image: var(--background-header-ref);
+  background-position: center center;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.profile-card__content {
+  width: 100%;
+  padding: var(--b-top-padding) var(--b-padding);
+
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-mediun-rule);
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card__avatar * {
+  pointer-events: none;
+}
+
+.profile-card__avatar {
+  overflow: hidden;
+  position: relative;
+
+  width: var(--w-avatar);
+  height: var(--h-avatar);
+
+  border-radius: 50%;
+  padding: var(--avatar-offset);
+
+  background-color: var(--color-white);
+  border: 1px solid var(--color-light-rule);
+
+  /*
+   * MARGIN-TOP (negative):
+   * (((height / 2) + pading) * -1) = -90px
+   */
+  margin-top: calc(((var(--h-avatar) / 2) + var(--b-top-padding)) * -1);
+
+  cursor: pointer;
+
+  /* prettier-iginore */
+  transition: background 0.6s cubic-bezier(0.39, 0.575, 0.565, 1),
+    border-color 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.profile-card__avatar:hover {
+  --ref: var(--color-primary-dark-cyan); /** local scope/context */
+
+  background-color: var(--ref);
+  border-color: var(--ref);
+}
+
+.profile-card__image {
+  object-fit: cover;
+
+  border-radius: 50%;
+  border: 1px solid var(--color-light-rule);
+}
+
+.profile-card__name {
+  margin: 1rem 0;
+
+  color: var(--color-primary-desaturated-blue);
+
+  font-size: 2.2rem;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+.profile-card__name span {
+  font-weight: 400;
+  font-size: 1.8rem;
+
+  color: var(--color-primary-grayish-blue);
+
+  line-height: 1.4;
+}
+
+.profile-card__country {
+  font-size: 1.7rem;
+
+  color: var(--color-primary-grayish-blue);
+
+  line-height: 1.4rem;
+}
+
+.profile-card__footer {
+  background-color: var(--color-white);
+
+  /* Analutic padding (top/bottom) */
+  /* prettier-ignore */
+  padding: 
+    calc(var(--b-top-padding) - 1.2rem) 2rem 
+    calc(var(--b-top-padding) - 1.2rem) 2rem;
+}
+
+.profile-card__analytics {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card__analytic {
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+
+  padding: 1.2rem 0;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  /* prettier-ignore */
+  transition: 
+    transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    border-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.profile-card__analytic:hover {
+  border-color: var(--color-primary-dark-cyan);
+
+  transform: scale(1.1);
+}
+
+.profile-card__analytic:active {
+  transform: scale(0.9);
+}
+
+.profile-card__analytic * {
+  pointer-events: none;
+  user-select: none;
+}
+
+.profile-card__analytic strong {
+  font-size: 2.2rem;
+  font-weight: 700;
+
+  color: var(--color-primary-desaturated-blue);
+
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.profile-card__analytic span {
+  margin-top: 0.4rem;
+
+  font-size: 1.5rem;
+
+  color: var(--color-primary-grayish-blue);
+}
+
+.author {
+  margin: 1rem 0;
+
+  font-size: 1.4rem;
+
+  color: var(--color-primary-desaturated-blue);
+}
+
+.author::selection,
+.author *::selection {
+  background-color: var(--color-primary-desaturated-blue);
+}
+
+.author a {
+  font-size: 1.6rem;
+  padding: 0.2rem 0.8rem;
+
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.author a:hover {
+  font-weight: 700;
+  text-decoration: underline;
+}
