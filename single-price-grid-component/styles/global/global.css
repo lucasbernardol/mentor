@@ -1,0 +1,94 @@
+:root {
+  --color-primary-cyan: #2ab2af;
+
+  --color-primary-light-cyan: hsl(179, 52%, 49%);
+
+  --color-primary-bright-yellow: hsl(71, 73%, 54%);
+  --color-primary-dark-yellow: hsl(71, 63%, 47%);
+
+  --color-light-gray: hsl(204, 43%, 93%);
+  --color-grayish-blue: hsl(218, 22%, 67%);
+
+  --color-white: #ffffff;
+
+  --color-selection: rgba(22, 68, 67, 0.4);
+  --color-box-shadow: rgba(0, 0, 0, 0.3);
+
+  font-size: 62.5%;
+
+  /* Dimensions (width/height)**/
+  --w-pricing-card: 820px;
+
+  /* Boxs */
+  --m-pricing-card: 2rem;
+  --p-main: 3rem;
+  --p-card: 3rem;
+
+  --b-card-radius: 0.8rem;
+
+  --gap: 0.8rem;
+  --gap-x: 1rem;
+}
+
+*::selection {
+  background-color: var(--color-selection);
+  color: var(--color-white);
+}
+
+*::-moz-selection {
+  background-color: var(--color-selection);
+  color: var(--color-white);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  font-size: 1.6rem;
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+
+  border: none;
+  outline: none;
+}
+
+body {
+  background-color: var(--color-light-gray);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+a * {
+  pointer-events: none;
+}
+
+button * {
+  pointer-events: none;
+
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}

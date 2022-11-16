@@ -1,0 +1,28 @@
+@media only screen and (max-width: 920px) {
+  .main {
+    padding: 0 var(--p-main);
+  }
+
+  .pricing-card {
+    grid-template-columns: 1fr;
+
+    /* prettier-ignore */
+    grid-template-areas: 
+      'overview_mobile'
+      'payment_mobile'
+      'features_mobile'
+    ;
+  }
+
+  .pricing-card__overview {
+    grid-area: overview_mobile;
+  }
+
+  .pricing-card__payment {
+    grid-area: payment_mobile;
+  }
+
+  .pricing-card__features {
+    grid-area: features_mobile;
+  }
+}
