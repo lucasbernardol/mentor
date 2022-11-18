@@ -1,0 +1,115 @@
+:root {
+  --color-desaturated-red: hsl(0, 36%, 70%);
+  --color-soft-red: hsl(0, 93%, 68%);
+
+  --color-red-selection: rgba(252, 145, 145, 0.2);
+  --color-desaturated-red-hover: hsl(0, 28%, 58%);
+
+  --color-white: #ffffff;
+
+  --z-index: 999;
+
+  --bigger-title: 9rem;
+  --medium-title: 7rem;
+  --small-title: 4rem;
+
+  --p-box: 3rem;
+  --p-header: 2rem;
+
+  --gap: 3rem;
+  --spacing: 1.4rem;
+
+  /**
+   * 100% - 16px  |  62.25% - 10px;
+   */
+  font-size: 62.25%;
+}
+
+*::selection {
+  background-color: var(--color-red-selection);
+  color: inherit;
+}
+
+*::-moz-selection {
+  background-color: var(--color-red-selection);
+  color: inherit;
+}
+
+input::selection {
+  background-color: var(--color-soft-red);
+  color: var(--color-white);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  font-size: 1.6rem;
+
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+
+  border: 0;
+  outline: none;
+}
+
+body {
+  background-color: var(--color-white);
+
+  /* prettier-ignore */
+  /* background: 
+    linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%)), 
+    linear-gradient(135deg,  hsl(0, 80%, 86%), hsl(0, 74%, 74%))
+  ; */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a * {
+  pointer-events: none;
+}
+
+button * {
+  pointer-events: none;
+
+  user-select: none;
+
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+img {
+  pointer-events: none;
+  user-select: none;
+
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+.sr-only {
+  visibility: hidden;
+  opacity: 0;
+
+  user-select: none;
+  -webkit-user-drag: none;
+
+  margin: 0;
+  padding: 0;
+
+  font-size: 0;
+}
+
+.logo {
+  width: 20rem;
+}
