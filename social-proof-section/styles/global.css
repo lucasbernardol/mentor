@@ -1,0 +1,196 @@
+:root {
+  --color-very-dark-magenta: hsl(300, 43%, 22%);
+  --color-soft-pink: hsl(333, 80%, 67%);
+
+  --color-dark-grayish-magenta: hsl(303, 10%, 53%);
+  --color-light-grayish-magenta: hsl(300, 24%, 96%);
+
+  --color-background: #f0f0f5;
+  --color-selection: rgba(35, 131, 226, 0.28);
+
+  --color-white: #ffffff;
+
+  --z-index-left: -1;
+  --z-index-right: -2;
+  --z-index-reader: -99;
+
+  /** 
+   * Dimensions (width/height)
+   */
+  --w-social-preview: 1200px;
+
+  --w-star-icon: 17px;
+  --h-star-icon: 16px;
+
+  --w-avatar: 6.4rem; /* 64px */
+  --h-avatar: 6.4rem; /* 64px */
+
+  --w-ratings: 460px;
+  --w-ratings-item: 420px;
+
+  --w-summary: 600px;
+
+  /** 
+   * Gaps
+   */
+  --gap: 3rem;
+  --mediun-gap: 2rem;
+  --small-gap: 1.4rem;
+  --small-1x-gap: 1rem;
+  --small-2x-gap: 0.5rem;
+
+  /* Others*/
+  --total-stars: 5;
+  --avatar-offset: 4px;
+  --rating-radius: 0.8rem;
+
+  --title-percentage: 55%;
+  --text-percentage: 70%;
+
+  /* Testing animations/transitions with CSS variables */
+  --cubic-card: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  /** 
+   * 10px
+   */
+  font-size: 62.5%;
+}
+
+* {
+  /** 
+   * Reset/normalize CSS
+   */
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 400;
+
+  border: none;
+  outline: none;
+
+  /** 
+   * All: 16px;
+   */
+  font-size: 1.6rem;
+}
+
+*::selection {
+  background-color: var(--color-selection);
+  color: inherit;
+}
+
+*::-moz-selection {
+  background-color: var(--color-selection);
+  color: inherit;
+}
+
+body::before {
+  --background-url: url('../assets/images/bg-pattern-top-desktop.svg');
+
+  position: absolute;
+  z-index: var(--z-index-left);
+
+  top: 0;
+  left: 0;
+
+  content: '';
+  pointer-events: none;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: var(--background-url);
+  background-repeat: no-repeat;
+
+  background-position: top left;
+}
+
+body::after {
+  --background-url: url('../assets/images/bg-pattern-bottom-desktop.svg');
+
+  position: absolute;
+  z-index: var(--z-index-right);
+
+  left: 0;
+  bottom: 0;
+
+  content: '';
+  pointer-events: none;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: var(--background-url);
+  background-repeat: no-repeat;
+
+  background-position: bottom right;
+}
+
+body {
+  position: relative;
+
+  background-color: var(--color-white);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+img {
+  pointer-events: none;
+
+  object-fit: cover;
+  -o-object-fit: cover;
+
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+.sr-only {
+  position: absolute;
+  z-index: var(--z-index-reader);
+
+  visibility: hidden;
+  overflow: hidden;
+
+  display: inline-block;
+  opacity: 0;
+
+  margin: 0;
+  padding: 0;
+
+  width: 0;
+  height: 0;
+
+  font-size: 0;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+.avatar-img {
+  object-fit: cover;
+  -o-object-fit: cover;
+
+  object-position: center;
+  -o-object-position: center;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%; /* width / 2 */
+}
