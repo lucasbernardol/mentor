@@ -1,0 +1,48 @@
+@media all and (max-width: 980px) {
+  .four-cards {
+    --_m: var(--m-cards);
+
+    width: 80%;
+    grid-template-columns: 1fr;
+
+    padding: 0 var(--medium-gap);
+
+    margin-top: var(--_m);
+    margin-bottom: var(--_m);
+  }
+
+  .four-header__subtitle {
+    margin-top: var(--small-gap);
+  }
+}
+
+@media all and (max-width: 620px) {
+  .four-header__summary {
+    max-width: 80%;
+  }
+
+  .four-cards {
+    width: 100%;
+
+    margin-bottom: 0;
+  }
+}
+
+@media all and (max-width: 375px) {
+  .four-header {
+    margin: var(--m-header-mobile) 0;
+  }
+
+  .four-header__subtitle,
+  .four-header__title {
+    font-size: 2.8rem;
+  }
+
+  .four-header__title {
+    margin-top: var(--small-1x-gap);
+  }
+
+  .four-header__summary {
+    max-width: 100%;
+  }
+}

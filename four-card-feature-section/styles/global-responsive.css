@@ -1,0 +1,11 @@
+@media only screen and (max-width: 1024px) {
+  :root {
+    font-size: 56%; /* 9px */
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  :root {
+    font-size: 50%; /* 8px or 50% */
+  }
+}

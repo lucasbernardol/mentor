@@ -1,0 +1,164 @@
+.four-grouping {
+  position: relative;
+
+  width: min(100%, var(--w-card-grouping));
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.four-header {
+  position: relative;
+
+  width: 100%;
+
+  /* 
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center; 
+  */
+  text-align: center;
+}
+
+.four-header__subtitle {
+  font-size: 3.2rem;
+  font-weight: 200;
+
+  color: var(--color-grayish-blue);
+
+  line-height: 1.4;
+}
+
+.four-header__title {
+  /* margin:  0 0.8rem; */
+
+  font-size: 3.2rem;
+  font-weight: 600;
+
+  color: var(--color-very-dark-blue);
+
+  line-height: 1.4;
+  text-align: center;
+}
+
+.four-header__summary {
+  max-width: var(--summary-percentage);
+
+  margin: 0 auto;
+  margin-top: var(--medium-gap);
+
+  font-size: 1.6rem;
+  font-weight: 400;
+
+  color: var(--color-grayish-blue);
+
+  line-height: 1.4;
+  text-align: center;
+}
+
+.four-cards {
+  position: relative;
+
+  width: 100%;
+  padding: 0 var(--p-cards);
+
+  margin: 0 auto;
+  margin-top: 3rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: var(--larger-gap);
+  align-items: center;
+
+  transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  cursor: pointer;
+}
+
+.four-cards__clamp {
+  display: flex;
+  flex-direction: column;
+}
+
+.four-cards__clamp > div:not(:last-child) {
+  /* Gap */
+  margin-bottom: var(--larger-gap);
+}
+
+.four-cards__item {
+  /* flex: 1; */
+  --_border-color: transparent; /* _ represents private/local scope */
+
+  padding: var(--p-card-item);
+  background-color: var(--color-white);
+
+  border-radius: 0.5rem;
+  border-top: var(--border-card) solid var(--_border-color);
+
+  box-shadow: 5px 5px 15px -10px var(--color-grayish-blue);
+
+  /* prettier-ignore */
+  transition: 
+    border 0.6s cubic-bezier(0.215, 0.61, 0.355, 1),
+    transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1)
+  ;
+}
+
+.four-cards__title {
+  margin-bottom: var(--small-2x-gap);
+
+  font-size: 2rem;
+  font-weight: 600;
+
+  color: var(--color-very-dark-blue);
+
+  line-height: 1.4;
+}
+
+.four-cards__text {
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  color: var(--color-grayish-blue);
+
+  line-height: 1.6;
+}
+
+.four-cards__img {
+  position: relative;
+
+  margin-top: var(--gap-x1);
+  margin-left: auto;
+
+  width: var(--w-card-icon);
+  height: var(--h-card-icon);
+
+  transition: opacity 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.four-cards__item:hover .four-cards__img {
+  opacity: 0.3;
+}
+
+.four-cards__item.four-cards__item--supervisor {
+  --_border-color: var(--color-cyan);
+}
+
+.four-cards__item.four-cards__item--team-builder {
+  --_border-color: var(--color-red);
+}
+
+.four-cards__item.four-cards__item--karma {
+  --_border-color: var(--color-orange);
+}
+
+.four-cards__item.four-cards__item--calculator {
+  --_border-color: var(--color-blue);
+}

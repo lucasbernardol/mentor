@@ -1,0 +1,167 @@
+:root {
+  --color-red: hsl(0, 78%, 62%);
+  --color-cyan: hsl(180, 62%, 55%);
+
+  --color-orange: hsl(34, 97%, 64%);
+  --color-blue: #549ef2;
+
+  --color-very-dark-blue: hsl(234, 12%, 34%);
+  --color-grayish-blue: hsl(229, 6%, 66%);
+
+  --color-very-light-gray: hsl(0, 0%, 98%);
+
+  --color-white: #ffffff;
+  --color-selection: rgba(35, 131, 226, 0.15);
+
+  /**
+   * Width/heights
+   */
+  --w-card-grouping: 1200px;
+
+  --w-card-icon: 6.4rem;
+  --h-card-icon: 6.4rem;
+
+  /**
+   * Paddings/boxs
+   */
+  --p-cards: 3rem;
+  --m-cards: var(--p-cards);
+  --m-header-mobile: 4rem;
+
+  --p-card-item: var(--p-cards);
+  --p-wrapper: 2rem;
+
+  /**
+   * Gaps
+   */
+  --larger-gap: 3rem;
+  --gap-x1: 2.4rem;
+  --gap: 2rem;
+  --medium-gap: 1.8rem;
+  --small-gap: 1rem;
+  --small-1x-gap: 0.8rem;
+  --small-2x-gap: 0.5rem;
+
+  /**
+   * Misc
+   */
+  --border-card: 3px;
+  --summary-percentage: 45%;
+
+  --z-index-screen: -99;
+
+  /**
+   * 10px
+   */
+  font-size: 62.5%;
+}
+
+html {
+  text-rendering: optimizeLegibility;
+}
+
+*::selection {
+  background-color: var(--color-selection);
+  color: inherit;
+}
+
+*::-moz-selection {
+  background-color: var(--color-selection);
+  color: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+
+  /**
+   * All: text/elements
+   */
+  font-size: 1.5rem;
+
+  border: none;
+  outline: none;
+}
+
+*::before,
+*::after {
+  position: relative;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-very-light-gray);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  position: relative;
+
+  pointer-events: none;
+  display: block;
+
+  object-fit: cover;
+  -o-object-fit: cover;
+
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+
+  -webkit-user-drag: none;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  overflow: hidden;
+  cursor: default;
+}
+
+.sr-only {
+  /**
+   * Postion
+   */
+  position: absolute;
+  z-index: var(--z-index-screen);
+
+  /**
+   * Box model
+   */
+  width: 0;
+  height: 0;
+
+  margin: 0;
+  padding: 0;
+
+  /**
+   * Fonts/texts
+   */
+  font-size: 0;
+
+  /**
+   * Misc/others
+   */
+  opacity: 0;
+
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/* Google translate fix tag styles */
+font {
+  font: inherit;
+}
