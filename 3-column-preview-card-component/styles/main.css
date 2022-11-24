@@ -1,0 +1,115 @@
+.preview {
+  position: relative;
+
+  width: min(100%, var(--w-preview));
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  overflow: hidden;
+  border-radius: var(--preview-radius);
+}
+
+.preview > div {
+  /* preview-card */
+  flex: 1;
+}
+
+.preview-card {
+  --_card-color: var(--color-bright-orange); /* local variables */
+
+  position: relative;
+
+  width: 100%;
+  padding: var(--p-card);
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  background-color: var(--_card-color);
+
+  overflow: hidden;
+}
+
+.preview-card.preview-card--dark {
+  --_card-color: var(--color-dark-cyan);
+}
+
+.preview-card.preview-card--very-dark {
+  --_card-color: var(--color-very-dark-cyan);
+}
+
+.preview-card__title {
+  margin: var(--m-title) 0;
+
+  font-size: 4.8rem;
+  font-family: 'Big Shoulders Display', cursive;
+
+  font-weight: 700;
+  color: var(--color-white);
+
+  text-transform: uppercase;
+  line-height: var(--title-line-height);
+}
+
+.preview-card__text {
+  max-width: var(--text-percentage);
+
+  font-size: 1.6rem;
+  font-weight: 400;
+
+  color: var(--color-transparent-white);
+
+  line-height: var(--text-line-height);
+}
+
+.preview-card__img {
+  /* Responsive icon  */
+  width: var(--w-card-icon);
+  height: var(--h-card-icon);
+}
+
+.preview-card__bottom {
+  margin-top: var(--bottom-height);
+}
+
+.preview-card__anchor {
+  --_anchor-color: var(--color-very-light-gray);
+
+  position: relative;
+
+  width: var(--w-anchor);
+  height: var(--h-anchor);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: var(--p-anchor) var(--p-anchor-2x);
+  border-radius: var(--anchor-radius);
+
+  border: var(--anchor-border) solid var(--_anchor-color);
+  background-color: var(--_anchor-color);
+
+  font-size: 1.5rem;
+  color: var(--_card-color);
+
+  line-height: var(--text-line-height);
+
+  /* prettier-ignore */
+  transition: 
+    background 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+    color 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+  ;
+
+  cursor: pointer;
+}
+
+.preview-card__anchor:hover {
+  background-color: transparent;
+
+  color: var(--_anchor-color);
+}

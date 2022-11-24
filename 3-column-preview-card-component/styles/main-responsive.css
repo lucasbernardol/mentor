@@ -1,0 +1,17 @@
+@media all and (max-width: 980px) {
+  .wrapper {
+    padding: var(--p-wrapper);
+  }
+
+  .preview {
+    grid-template-columns: 1fr;
+
+    width: 80%;
+  }
+}
+
+@media all and (max-width: 720px) {
+  .preview {
+    width: 100%;
+  }
+}

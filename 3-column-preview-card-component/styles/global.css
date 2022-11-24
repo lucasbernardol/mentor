@@ -1,0 +1,130 @@
+:root {
+  --color-bright-orange: hsl(31, 77%, 52%);
+
+  --color-dark-cyan: #006970;
+  --color-very-dark-cyan: hsl(179, 100%, 13%);
+
+  --color-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --color-very-light-gray: hsl(0, 0%, 95%);
+
+  --color-white: #ffffff;
+  --color-selection: rgba(107, 228, 226, 0.3);
+
+  /** 
+   * Width/heights
+   */
+  --w-preview: 1100px;
+
+  --w-card-icon: 6.4rem;
+  --h-card-icon: 4rem;
+
+  --w-anchor: 18rem; /* 180px */
+  --h-anchor: 5.4rem; /* 54px */
+
+  /** 
+   * Paddings/boxs
+   */
+  --p-wrapper: 2rem;
+
+  --p-anchor: 1.8rem;
+  --p-anchor-2x: 2.8rem;
+  --p-card: 5rem;
+
+  --m-title: 2.2rem;
+
+  /** 
+   * Misc
+   */
+  --title-line-height: 1.7;
+  --text-line-height: 1.6;
+
+  --anchor-radius: 2.8rem;
+  --preview-radius: 0.8rem;
+
+  --anchor-border: 2px;
+
+  --text-percentage: 85%;
+  --bottom-height: 10rem;
+
+  /** 
+   * 10px;
+   */
+  font-size: 62.5%;
+}
+
+*::selection {
+  background-color: var(--color-selection);
+  color: inherit;
+}
+
+*::-moz-selection {
+  background-color: var(--color-selection);
+  color: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  /* font-family: 'Big Shoulders Display', cursive; */
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+
+  box-sizing: border-box;
+  -webkit-box-sizing: border;
+  -webkit-box-sizing: border-box;
+
+  font-size: 1.6rem;
+}
+
+*::before,
+*::after {
+  position: relative;
+
+  box-sizing: border;
+
+  margin: 0;
+  padding: 0;
+
+  font: inherit;
+}
+
+body {
+  background-color: var(--color-very-light-gray);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+img {
+  position: relative;
+
+  pointer-events: none;
+
+  display: block;
+
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  overflow: hidden;
+  cursor: default;
+}
+
+/* Google translate fix styles */
+font {
+  font: inherit;
+}
